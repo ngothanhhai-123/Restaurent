@@ -1,0 +1,15 @@
+      <div id="view-tables" class="flex-1 overflow-y-auto p-8 space-y-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Quản lý bàn</h2>
+            <p class="text-slate-500 mt-1">Theo dõi trạng thái bàn và đặt bàn.</p>
+          </div>
+          <button class="flex items-center gap-2 bg-gradient-to-r from-rose-600 to-primary hover:from-rose-500 hover:to-rose-700 text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-lg shadow-rose-900/20 hover:shadow-rose-900/40 hover:-translate-y-0.5" onclick="openModal('modal-add-table')">
+            <span class="material-symbols-outlined">add</span>
+            Thêm bàn
+          </button>
+        </div>
+        <div id="tables-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <!-- JS Render -->
+        </div>
+      </div>
