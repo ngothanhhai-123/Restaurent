@@ -21,17 +21,13 @@ Mở Terminal và chạy lần lượt các lệnh sau:
 Bước 1: Clone dự án về máy
 git clone [https://github.com/ngothanhhai-123/Elite-Gourmet-.git](https://github.com/ngothanhhai-123/Elite-Gourmet-.git)
 cd Elite-Gourmet-
-Bước 2: Cài đặt thư viện (Dependencies)
-
-Bash
+Bước 2: Cài đặt thư viện (Dependencies):
 npm install
-Bước 3: Khởi động Dev Server
-
-Bash
+Bước 3: Khởi động Dev Server:
 npm run dev
 🌐 Đường dẫn truy cập (Local URLs)
-Sau khi Dev Server khởi động thành công (thường chạy ở cổng 5173), bạn có thể truy cập qua trình duyệt:
+Sau khi Dev Server khởi động thành công , bạn có thể truy cập qua trình duyệt:
 
-Trang Khách hàng (Client): http://localhost:5173/
+Trang Khách hàng (Client): http://localhost:3000/
 
-Trang Quản trị (Admin): http://localhost:5173/admin/
+Trang Quản trị (Admin): http://localhost:3000/admin/
