@@ -34,14 +34,14 @@ public class User {
     @Column(length = 15,nullable=false)
     private String phone;
 
-    @Column(nullable = false,length=30)
+    @Column(nullable = false,length=255)
     private String password;
 
-    public enum Role{Customer,Admin}
+    public enum Role{CUSTOMER,ADMIN}
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role =Role.Customer;
+    private Role role =Role.CUSTOMER;
 
     @Column(nullable = false)
     private Boolean is_active=Boolean.TRUE;

@@ -56,7 +56,7 @@ public class UserService {
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
         user.setPassword(this.passwordEncoder.encode(request.getPassword()));
-        user.setRole(User.Role.Customer);
+        user.setRole(User.Role.CUSTOMER);
         user.setIs_active(request.getIsActive() != null ? request.getIsActive() : Boolean.TRUE);
 
         return toResponse(this.userRepository.save(user));
