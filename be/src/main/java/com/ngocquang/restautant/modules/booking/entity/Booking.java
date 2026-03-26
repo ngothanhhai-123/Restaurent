@@ -43,11 +43,11 @@ public class Booking {
     @Lob
     private String note;
 
-    public enum Status{Confirmed,Pending,Cancelled}
+    public enum Status{CONFIRMED,PENDING,CANCELLED}
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private Status status=Status.Pending;
+    private Status status=Status.PENDING;
 
     @Column(nullable = false)
     private LocalDateTime createdAt=LocalDateTime.now();

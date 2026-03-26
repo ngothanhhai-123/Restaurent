@@ -37,8 +37,8 @@ public class AuthService {
                 .created_at(LocalDateTime.now())
                 .build();
 
-        user = userRepository.save(user);
-        
+        user = this.userRepository.save(user);
+
         String jwtToken = jwtService.generateToken(user.getEmail());
 
         return AuthResponse.builder()

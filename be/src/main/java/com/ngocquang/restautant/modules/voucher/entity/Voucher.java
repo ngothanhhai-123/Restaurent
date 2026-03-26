@@ -40,11 +40,11 @@ public class Voucher {
     @Column(nullable = false)
     private Integer quantity;
 
-    public enum DiscountType { percent, fixed }
+    public enum DiscountType { PERCENT, FIXED }
 
     @Enumerated(EnumType.STRING)
     @Column( nullable = false)
-    private DiscountType discountType = DiscountType.fixed;
+    private DiscountType discountType = DiscountType.FIXED;
 
     @OneToMany(mappedBy = "voucher")
     private List<VoucherDetail> voucherDetails;

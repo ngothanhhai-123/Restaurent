@@ -54,7 +54,7 @@ public class ComboService {
         combo.setPrice(request.getPrice());
         combo.setDescription(request.getDescription());
         combo.setImageUrl(request.getImageUrl());
-        combo.setStatus(request.getStatus() != null ? request.getStatus() : Combo.Status.Available);
+        combo.setStatus(request.getStatus() != null ? request.getStatus() : Combo.Status.AVAILABLE);
     }
 
     private void validateFoods(List<ComboRequest.InputFood> foods) {

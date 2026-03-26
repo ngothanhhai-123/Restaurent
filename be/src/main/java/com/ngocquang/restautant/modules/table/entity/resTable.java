@@ -26,11 +26,11 @@ public class resTable {
     @Column(nullable = false)
     private int capacity;
 
-    public enum Status{Available,Occupied,Reserved}
+    public enum Status{AVAILABLE,OCCUPIED,RESERVED}
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Status status=Status.Available;
+    private Status status=Status.AVAILABLE;
 
     @ManyToMany(mappedBy = "tables")
     private List<Booking> bookings;

@@ -43,7 +43,7 @@ public class VoucherService {
         voucher.setEndDate(request.getEndDate());
         voucher.setQuantity(request.getQuantity());
         voucher.setDiscountType(
-                request.getDiscountType() != null ? request.getDiscountType() : Voucher.DiscountType.fixed);
+                request.getDiscountType() != null ? request.getDiscountType() : Voucher.DiscountType.FIXED);
     }
 
     private void validateDates(LocalDateTime startDate, LocalDateTime endDate) {

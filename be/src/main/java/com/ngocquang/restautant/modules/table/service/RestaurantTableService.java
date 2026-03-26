@@ -29,7 +29,7 @@ public class RestaurantTableService {
 
     private void RequestToEntity(resTable table, TableRequest request) {
         table.setCapacity(request.getCapacity());
-        table.setStatus(request.getStatus() != null ? request.getStatus() : resTable.Status.Available);
+        table.setStatus(request.getStatus() != null ? request.getStatus() : resTable.Status.AVAILABLE);
     }
 
     public List<TableResponse> getAllTable() {

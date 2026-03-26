@@ -37,12 +37,12 @@ public class Combo {
      private String imageUrl;
 
      public enum Status {
-          Available, Unavailable, Out_of_stock
+          AVAILABLE, UNAVAILABLE, OUT_OF_STOCK
      };
 
      @Enumerated(EnumType.STRING)
      @Column(nullable = false)
-     private Status status = Status.Available;
+     private Status status = Status.AVAILABLE;
 
      @OneToMany(mappedBy = "combo")
      private List<OrderDetail> orderDetails;

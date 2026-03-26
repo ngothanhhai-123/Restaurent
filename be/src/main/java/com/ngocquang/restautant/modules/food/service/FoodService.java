@@ -49,7 +49,7 @@ public class FoodService {
         food.setPrice(request.getPrice());
         food.setDescription(request.getDescription());
         food.setImageUrl(request.getImageUrl());
-        food.setStatus(request.getStatus() != null ? request.getStatus() : Food.Status.Available);
+        food.setStatus(request.getStatus() != null ? request.getStatus() : Food.Status.AVAILABLE);
         food.setCategory(resolveCategory(request.getCategoryId()));
     }
 

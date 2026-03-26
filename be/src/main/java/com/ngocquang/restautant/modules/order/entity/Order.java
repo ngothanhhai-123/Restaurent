@@ -1,6 +1,5 @@
 package com.ngocquang.restautant.modules.order.entity;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +14,7 @@ import com.ngocquang.restautant.modules.booking.entity.Booking;
 import com.ngocquang.restautant.modules.user.entity.User;
 
 @Entity
-@Table(name="orders")
+@Table(name = "orders")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -26,26 +25,28 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false,updatable = false)
-    private LocalDateTime created_at=LocalDateTime.now();
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime created_at = LocalDateTime.now();
 
-    @Column(nullable = false,precision = 12,scale = 2)
+    @Column(nullable = false, precision = 12, scale = 2)
     private BigDecimal total_amount;
 
-    public enum Status{Cart,Confirmed,Pending,Cancelled}
+    public enum Status {
+        CONFIRMED, PENDING, CANCELLED
+    }
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Status status=Status.Pending;
+    private Status status = Status.PENDING;
 
     @OneToMany(mappedBy = "order")
     private List<OrderDetail> orderDetails;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="booking_id")
+    @JoinColumn(name = "booking_id")
     private Booking booking;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
 }

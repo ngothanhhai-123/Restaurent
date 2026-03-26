@@ -22,10 +22,10 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    public enum Method{Cash,Bank_Transfer};
+    public enum Method{CASH,BANK_TRANSFER};
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private Method method=Method.Cash;
+    private Method method=Method.CASH;
 
     @Column(nullable = false,precision = 12,scale = 2)
     private BigDecimal amount;
