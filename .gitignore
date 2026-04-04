@@ -7,3 +7,5 @@ coverage/
 .env*
 !.env.example
 \n.idea/\n.vscode/
+# ignore config local
+be/src/main/resources/application.properties
